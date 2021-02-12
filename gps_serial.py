@@ -2,7 +2,7 @@ import io
 import serial
 
 # Serial setup
-serialConf = serial.Serial('/dev/ttyTHS0', 9600, timeout=1.0)
+serialConf = serial.Serial('/dev/ttyTHS0', 9600, timeout=0.5)
 serialio = io.TextIOWrapper(io.BufferedRWPair(serialConf, serialConf))
 
 # Enable only NMEA sentences required
